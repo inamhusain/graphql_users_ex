@@ -1,0 +1,40 @@
+{
+  "input": 
+  {
+    "name": "Husain",
+    "email": "Husain@email.com",
+    "username": "null",
+    "phone": "1212",
+  	"website": "husain.ml",
+    "address": {
+      "street": "ilol",
+      "suite": "456",
+      "city": "Himmatnagar",
+      "zipcode": "383001"},
+  "company": {"name": "webe"}
+  }
+  
+}
+
+
+// 
+// 
+// 
+mutation createUser($input:CreateUserInput!){
+  createUser(input:$input){
+    name
+    email
+    address{
+      street
+      suite
+      city
+      zipcode
+    }
+    phone
+    website
+    company{
+      name
+    }
+  }
+}
+ 
